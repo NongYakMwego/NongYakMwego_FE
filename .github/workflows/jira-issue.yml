@@ -70,7 +70,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: "update-issue"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           title: "[${{ steps.create.outputs.issue }}] ${{ github.event.issue.title }}"
 
       - name: Add comment with Jira issue link
