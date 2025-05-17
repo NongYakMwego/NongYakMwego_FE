@@ -1,4 +1,4 @@
-import pullLogo from "../assets/pullLogo.svg";
+import pullLogo from "../assets/fullLogo.svg";
 import kakaoLogin from "../assets/kakao_login_large_wide.png";
 import { Link } from "react-router-dom";
 
