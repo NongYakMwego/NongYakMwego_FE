@@ -1,18 +1,19 @@
 import TextBalloon1 from "../../components/textBalloon1";
 import characterLogo from "../../assets/characterLogo.svg";
 import { IoIosSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function Crop() {
   return (
-    <div className="flex flex-col items-center py-5 px-10 h-full justify-between">
+    <div className="flex flex-col items-center py-7 px-10 h-full justify-between">
       <div className="flex flex-col items-center">
-        <TextBalloon1 />
+        <TextBalloon1 text="현재 키우시는 농작물을 선택해주세요! 😄" />
         <img src={characterLogo} className="w-60 h-60" />
       </div>
       <form className="flex flex-col space-y-10 w-full">
         <div className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2 ">
-            <span className="font-semibold">직접 검색하기</span>
+            <label className="font-semibold">직접 검색하기</label>
             <div className="relative">
               <input
                 type="text"
@@ -23,7 +24,7 @@ export default function Crop() {
             </div>
           </div>
           <div className="flex flex-col space-y-2">
-            <span className="font-semibold">직접 입력하기</span>
+            <label className="font-semibold">직접 입력하기</label>
             <input
               type="text"
               placeholder="농작물을 입력하세요"
@@ -31,7 +32,7 @@ export default function Crop() {
             />
           </div>
           <div className="flex flex-col space-y-2">
-            <span className="font-semibold">직접 사진찍기</span>
+            <label className="font-semibold">직접 사진찍기</label>
             <input
               type="text"
               placeholder="농작물을 찍으세요"
@@ -39,9 +40,15 @@ export default function Crop() {
             />
           </div>
         </div>
-        <button className="bg-red-500 h-11 w-full rounded-full font-bold text-lg">
+        {/* <button className="bg-red-500 h-11 w-full rounded-full font-bold text-lg">
           다음
-        </button>
+        </button> */}
+        <Link
+          className="bg-red-500 h-11 w-full rounded-full font-bold text-lg flex items-center justify-center"
+          to="/select/cropConfirm"
+        >
+          다음
+        </Link>
       </form>
     </div>
   );

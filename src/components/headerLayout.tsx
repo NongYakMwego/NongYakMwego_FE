@@ -4,7 +4,7 @@ import textLogo from "../assets/textLogo.svg";
 // HeaderLayout.tsx
 export default function HeaderLayout() {
   return (
-    <div className="w-[33rem] m-auto h-screen shadow-lg bg-gray-500 flex flex-col">
+    <div className="w-[33rem] m-auto h-screen shadow-lg flex flex-col">
       <div className="h-16 shadow-md pl-3">
         <img src={textLogo} className="h-full w-auto object-contain" />
       </div>
