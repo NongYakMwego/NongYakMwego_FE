@@ -1,7 +1,20 @@
-export default function TextBalloon1() {
+type TextBalloon1Props = {
+  text: string;
+  width?: number;
+  height?: number;
+};
+
+export default function TextBalloon1({
+  text,
+  width = 24,
+  height = 13,
+}: TextBalloon1Props) {
   return (
     <svg
-      className="w-96 h-52" // Tailwind로 실제 사이즈 조절
+      style={{
+        width: `${width}rem`,
+        height: `${height}rem`,
+      }}
       viewBox="0 0 400 200"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -37,9 +50,8 @@ export default function TextBalloon1() {
 
       {/* foreignObject 안에 텍스트 넣기 */}
       <foreignObject x="60" y="60" width="280" height="80">
-        <div className="w-full h-full flex flex-col justify-center items-center text-xl font-bold text-[#333] text-center ">
-          <div>현재 키우시는 농작물을</div>
-          <div>선택해주세요! 😄</div>
+        <div className="w-full h-full flex flex-col justify-center items-center text-xl font-bold text-[#333] text-center break-words">
+          <div>{text}</div>
         </div>
       </foreignObject>
     </svg>
