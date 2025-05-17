@@ -13,7 +13,7 @@ export default function NavLayout() {
     { id: 5, icon: <IoPersonOutline className="w-5 h-5" />, text: "Profile" },
   ];
   return (
-    <div className="w-[600px] m-auto min-h-screen flex flex-col bg-red-500">
+    <div className="w-[33rem] m-auto min-h-screen flex flex-col bg-red-500">
       <div className="flex-1">
         <Outlet />
       </div>
