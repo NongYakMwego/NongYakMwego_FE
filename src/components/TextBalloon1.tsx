@@ -1,19 +1,27 @@
+import { Link } from "react-router-dom";
+
 type TextBalloon1Props = {
   text: string;
   width?: number;
   height?: number;
+  isBug?: boolean;
 };
 
 export default function TextBalloon1({
   text,
   width = 24,
   height = 13,
+  isBug = false,
 }: TextBalloon1Props) {
   return (
     <svg
       style={{
         width: `${width}rem`,
         height: `${height}rem`,
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
       viewBox="0 0 400 200"
       xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +57,17 @@ export default function TextBalloon1({
       />
 
       {/* foreignObject 안에 텍스트 넣기 */}
-      <foreignObject x="60" y="60" width="280" height="80">
-        <div className="w-full h-full flex flex-col justify-center items-center text-xl font-bold text-[#333] text-center break-words">
+      <foreignObject x="60" y="50" className="w-72 h-24 absolute">
+        <div className="w-full h-full flex flex-col justify-between items-center text-xl font-bold text-[#333] text-center break-words">
           <div>{text}</div>
+          {isBug && (
+            <Link
+              to="/main"
+              className="bg-red-500 h-11 w-full rounded-full font-bold text-lg flex items-center justify-center"
+            >
+              아니요
+            </Link>
+          )}
         </div>
       </foreignObject>
     </svg>
