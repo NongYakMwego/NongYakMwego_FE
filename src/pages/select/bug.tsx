@@ -45,7 +45,7 @@ export default function Bug() {
         </button> */}
         <Link
           className="bg-red-500 h-11 w-full rounded-full font-bold text-lg flex items-center justify-center"
-          to="/select/cropConfirm"
+          to="/select/bugConfirm"
         >
           다음
         </Link>
