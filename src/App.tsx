@@ -1,6 +1,6 @@
 // App.tsx
 import { Route, Routes } from "react-router-dom";
-import Login from "./pages/login";
+import Login from "./pages/kakao/login";
 import Index from "./pages";
 import GlobalLayout from "./components/GlobalLayout";
 import NavLayout from "./components/NavLayout";
@@ -12,13 +12,17 @@ import Crop from "./pages/select/crop";
 import CropConfirm from "./pages/select/cropConfirm";
 import Bug from "./pages/select/bug";
 import BugConfirm from "./pages/select/bugConfirm";
+import Redirection from "./pages/kakao/redirection";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<GlobalLayout />}>
         <Route index element={<Index />} />
-        <Route path="login" element={<Login />} />
+        <Route path="kakao">
+          <Route path="login" element={<Login />} />
+          <Route path="redirection" element={<Redirection />} />
+        </Route>
         <Route path="select" element={<HeaderLayout />}>
           <Route path="crop" element={<Crop />} />
           <Route path="cropConfirm" element={<CropConfirm />} />
