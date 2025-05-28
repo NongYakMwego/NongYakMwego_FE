@@ -33,5 +33,5 @@ export default function Redirection() {
     // sendCode();
     navigate("/select/crop");
   }, []);
-  return;
+  return <div></div>;
 }

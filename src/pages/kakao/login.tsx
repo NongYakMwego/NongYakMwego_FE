@@ -1,4 +1,4 @@
-import pullLogo from "../../assets/fullLogo.svg";
+import pullLogo from "../../assets/fullLogo.jpg";
 import kakaoLogin from "../../assets/kakao_login_large_wide.png";
 
 export default function Login() {

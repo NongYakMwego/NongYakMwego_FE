@@ -20,8 +20,8 @@ export default function TextBalloon1({
         <defs>
           <filter id="cuteShadow" x="-10%" y="-10%" width="120%" height="120%">
             <feDropShadow
-              dx="0"
-              dy="4"
+              dx="10"
+              dy="10"
               stdDeviation="6"
               floodColor="rgba(0,0,0,0.1)"
             />
@@ -54,7 +54,7 @@ export default function TextBalloon1({
             {isBug && (
               <Link
                 to="/main"
-                className="bg-red-500 h-10 w-full rounded-full font-bold text-white text-base sm:text-lg flex items-center justify-center mt-2"
+                className="bg-[#e5e5e5] h-10 w-full rounded-full font-bold text-black text-base sm:text-lg flex items-center justify-center mt-2"
               >
                 아니요
               </Link>
